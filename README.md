@@ -1,6 +1,6 @@
 # Meteor + MVVM + Material Design Lite
 
-(demo project)
+Demo for [Template2](https://github.com/comerc/meteor-template2)
 
 ## How to run
 
