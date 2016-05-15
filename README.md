@@ -1,6 +1,6 @@
-# Meteor + MVVM + Material Design Lite
+# Meteor + MVVM + MDL
 
-Demo for [Template2](https://github.com/comerc/meteor-template2)
+Demo for [Template2](https://github.com/comerc/meteor-template2) with [Material Design Lite](https://getmdl.io/)
 
 ## How to run
 
