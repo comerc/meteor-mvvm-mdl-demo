@@ -1,5 +1,6 @@
-# meteor-mvvm-mdl-demo
-Meteor + MVVM + Material Design Lite (demo project)
+# Meteor + MVVM + Material Design Lite
+
+(demo project)
 
 ## How to run
 
