@@ -1,0 +1,145 @@
+head
+  title simple
+  meta(name="viewport" content="width=device-width, initial-scale=1.0")
+  //- link(rel="stylesheet" href="/material.teal-red.min.css")
+
+body
+  +main
+
+template(name="main")
+  .demo-layout.mdl-layout.mdl-layout--fixed-header.mdl-js-layout.mdl-color--grey-100
+    header.demo-header.mdl-layout__header.mdl-color--grey-100.mdl-color-text--grey-800
+      .mdl-layout__header-row
+        span.mdl-layout-title Material Design Lite
+        .mdl-layout-spacer
+        .mdl-textfield.mdl-js-textfield.mdl-textfield--expandable
+          label.mdl-button.mdl-js-button.mdl-button--icon(for='search')
+            i.material-icons search
+          .mdl-textfield__expandable-holder
+            input#search.mdl-textfield__input(type='text')
+            label.mdl-textfield__label(for='search') Enter your query...
+    .demo-ribbon
+    +hello
+    
+template(name="hello")
+  main.demo-main.mdl-layout__content(style="{{#unless state.isBound}}display:none{{/unless}}")
+    .demo-container.mdl-grid
+      .mdl-cell.mdl-cell--2-col.mdl-cell--hide-tablet.mdl-cell--hide-phone
+      .demo-content.mdl-color--white.mdl-shadow--4dp.content.mdl-color-text--grey-800.mdl-cell.mdl-cell--8-col
+        .demo-crumbs.mdl-color-text--grey-500
+          | Google > Material Design Lite > How to install MDL
+        h3 How to install MDL
+        
+        button.mdl-button.mdl-js-button.mdl-button--raised.mdl-js-ripple-effect.mdl-button--accent(value="111")
+          | Click Me
+        p You've pressed the button {{state.counter}} times.
+
+        h5 switch: {{#if stateOf "switch-1"}}#1{{/if}} {{#if stateOf "switch-2"}}#2{{/if}}
+        label.mdl-switch.mdl-js-switch.mdl-js-ripple-effect
+          input.mdl-switch__input(type="checkbox" value-bind="switch-1")
+          span.mdl-switch__label #1
+        br
+        br
+        label.mdl-switch.mdl-js-switch.mdl-js-ripple-effect
+          input.mdl-switch__input(type="checkbox" value-bind="switch-2")
+          span.mdl-switch__label #2
+        br
+        br
+        h5 checkbox: {{state.checkbox}}
+        label.mdl-checkbox.mdl-js-checkbox.mdl-js-ripple-effect
+          input.mdl-checkbox__input(type="checkbox" value="one" value-bind="checkbox")
+          span.mdl-checkbox__label One
+        br
+        br
+        label.mdl-checkbox.mdl-js-checkbox.mdl-js-ripple-effect
+          input.mdl-checkbox__input(type="checkbox" value="two" value-bind="checkbox")
+          span.mdl-checkbox__label Two
+        br
+        br
+        h5 radio: {{state.radio}}
+        label.mdl-radio.mdl-js-radio.mdl-js-ripple-effect
+          input.mdl-radio__button(type="radio" name="options" value="first" value-bind="radio")
+          span.mdl-radio__label First
+        br
+        br
+        label.mdl-radio.mdl-js-radio.mdl-js-ripple-effect
+          input.mdl-radio__button(type="radio" name="options" value="second" value-bind="radio")
+          span.mdl-radio__label Second
+        br
+        br
+        h5 slider: {{state.slider}}
+        //- https://github.com/comerc/meteor-template-two-way-binding/issues/3
+        .wrapper-for-mdl-slider 
+          input.mdl-slider.mdl-js-slider(type="range" min="0" max="100" value-bind="slider")
+        br
+        br
+
+        h5 Textfield with Floating Label: {{stateOf "input-text"}}
+        form(action='#')
+          .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+            input#sample3.mdl-textfield__input(type='text' value-bind="input-text")
+            label.mdl-textfield__label(for='sample3') Text...
+          //- .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+          //-   input#sample4.mdl-textfield__input(type='text' pattern='-?[0-9]*(\.[0-9]+)?')
+          //-   label.mdl-textfield__label(for='sample4') Number...
+          //-   span.mdl-textfield__error Input is not a number!
+          
+    +megafooter
+    
+template(name="footer")    
+  footer.demo-footer.mdl-mini-footer
+    .mdl-mini-footer--left-section
+      ul.mdl-mini-footer--link-list
+        li
+          a(href='#') Help
+        li
+          a(href='#') Privacy and Terms
+        li
+          a(href='#') User Agreement
+
+template(name="megafooter")
+  footer.mdl-mega-footer
+    .mdl-mega-footer__top-section
+      .mdl-mega-footer__left-section
+        button.mdl-mega-footer__social-btn
+        button.mdl-mega-footer__social-btn
+        button.mdl-mega-footer__social-btn
+      .mdl-mega-footer__right-section
+        a(href='#') Introduction
+        a(href='#') App Status Dashboard
+        a(href='#') Terms of Service
+    .mdl-mega-footer__middle-section
+      .mdl-mega-footer__drop-down-section
+        h1.mdl-mega-footer__heading Learning and Support
+        ul.mdl-mega-footer__link-list
+          li
+            a(href='#') Resource Center
+          li
+            a(href='#') Help Center
+          li
+            a(href='#') Community
+          li
+            a(href='#') Learn with Google
+          li
+            a(href='#') Small Business Community
+          li
+            a(href='#') Think Insights
+      .mdl-mega-footer__drop-down-section
+        h1.mdl-mega-footer__heading Just for Developers
+        ul.mdl-mega-footer__link-list
+          li
+            a(href='#') Google Developers
+          li
+            a(href='#') AdWords API
+          li
+            a(href='#') AdWords Scipts
+          li
+            a(href='#') AdWords Remarketing Tag
+    .mdl-mega-footer__bottom-section
+      .mdl-logo
+        | More Information
+      ul.mdl-mega-footer__link-list
+        li
+          a(href='#') Help
+        li
+          a(href='#') Privacy and Terms
