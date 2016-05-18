@@ -34,7 +34,7 @@ template(name="hello")
           | Click Me
         p You've pressed the button {{state.counter}} times.
 
-        h5 switch: {{#if stateOf "switch-1"}}#1{{/if}} {{#if stateOf "switch-2"}}#2{{/if}}
+        h5 switch: {{#if state.[switch-1]}}#1{{/if}} {{#if state.[switch-2]}}#2{{/if}}
         label.mdl-switch.mdl-js-switch.mdl-js-ripple-effect
           input.mdl-switch__input(type="checkbox" value-bind="switch-1")
           span.mdl-switch__label #1
@@ -74,7 +74,7 @@ template(name="hello")
         br
         br
 
-        h5 Textfield with Floating Label: {{stateOf "input-text"}}
+        h5 Textfield with Floating Label: {{state.[input-text]}}
         form(action='#')
           .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
             input#sample3.mdl-textfield__input(type='text' value-bind="input-text")
