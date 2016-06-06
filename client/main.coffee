@@ -3,7 +3,7 @@
 
 require './main.jade'
 
-Template2.mixin Template.hello,
+Template2 Template.hello,
   states:
     # counter starts at 0
     counter: 0
